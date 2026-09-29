@@ -25,6 +25,8 @@ await page.waitForTimeout(5000);
 
 await page.getByPlaceholder('First Name').fill('lakshmi');
 await page.getByPlaceholder('Last Name').fill('narayana');
+await page.waitForTimeout(5000);
+
 await page.getByPlaceholder('Zip/Postal Code').fill('560032');
 await page.waitForTimeout(5000);
 
