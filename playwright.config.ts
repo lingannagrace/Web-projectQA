@@ -27,11 +27,11 @@ export default defineConfig({
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
-<<<<<<< HEAD
-  viewport: { width: 1920, height: 1080 },
-=======
 
->>>>>>> 71728c20685eec6ddc2501b6586871c230c4a822
+  viewport: { width: 1920, height: 1080 },
+
+
+
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
   },

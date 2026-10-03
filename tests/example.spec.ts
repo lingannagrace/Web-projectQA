@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 
-test('Brokenlinks', async ({ page }) => {
+test('Broken links', async ({ page }) => {
   await page.goto('https://testautomationpractice.blogspot.com/');
 
   // Expect a title "to contain" a substring.
@@ -33,7 +33,7 @@ await page.locator("//input[@id='multipleFilesInput']").first()
         }
 
     }*/
-    await page.mouse.wheel(0, 2000);
+    await page.mouse.wheel(0, 2200);
     await page.waitForTimeout(4000);
 
     /*await page.locator("//input[@id='input1']").fill('welcomt to the world of the playwright');
