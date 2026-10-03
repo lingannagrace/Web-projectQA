@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 
-test('', async ({ page }) => {
+test('Brokenlinks', async ({ page }) => {
   await page.goto('https://testautomationpractice.blogspot.com/');
 
   // Expect a title "to contain" a substring.
@@ -36,14 +36,14 @@ await page.locator("//input[@id='multipleFilesInput']").first()
     await page.mouse.wheel(0, 2000);
     await page.waitForTimeout(4000);
 
-    await page.locator("//input[@id='input1']").fill('welcomt to the world of the playwright');
+    /*await page.locator("//input[@id='input1']").fill('welcomt to the world of the playwright');
     await page.locator("//button[@id='btn1']").click();
 
     await page.locator("//input[@id='input2']").fill('welcome to the world of automation');
     await page.locator("//button[@id='btn2']").click();
 
     await page.locator("//input[@id='input3']").fill('welcome to the world of Model context protocol');
-    await page.locator("//button[@id='btn3']").click();
+    await page.locator("//button[@id='btn3']").click();*/
 
     await page.locator("//a[@href='http://www.deadlinkcity.com/error-page.asp?e=400']").click();
     await expect(page).toHaveURL('http://www.deadlinkcity.com/error-page.asp?e=400');
