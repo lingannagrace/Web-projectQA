@@ -1,7 +1,8 @@
-import { test, expect } from '@playwright/test';
-
-test('Drag and Drop', async ({ page }) => {
-
+import { test, expect, chromium } from '@playwright/test';
+ //const browser = await chromium.launch();
+test('Drag and Drop', async ({ page, browser }) => {
+  //const browser = await chromium.launch();
+  //const page = await browser.newPage(); 
   await page.goto(
     'https://www.tutorialspoint.com/selenium/practice/droppable.php'
   );
@@ -22,4 +23,6 @@ test('Drag and Drop', async ({ page }) => {
   // Verify successful drop
   await expect(target).toContainText('Dropped!');
   await page.waitForTimeout(4000);
+
+  await browser.close();
 });
