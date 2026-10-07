@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
+test('Broken links', async ({ page, browser }) => {
 
-test('Broken links', async ({ page }) => {
   await page.goto('https://testautomationpractice.blogspot.com/');
 
   // Expect a title "to contain" a substring.
@@ -61,6 +61,8 @@ await page.locator("//input[@id='multipleFilesInput']").first()
     await page.locator("//a[@href='http://www.deadlinkcity.com/error-page.asp?e=500']").click();
     await expect(page).toHaveURL('http://www.deadlinkcity.com/error-page.asp?e=500');
     await page.goBack();
+    await page.pause();
+    await browser.close();
     
 });
 
