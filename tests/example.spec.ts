@@ -1,11 +1,16 @@
 import { test, expect } from '@playwright/test';
 
+
 test('Broken links', async ({ page, browser }) => {
+
+
+test('has title', async ({ page }) => {
 
   await page.goto('https://testautomationpractice.blogspot.com/');
 
   // Expect a title "to contain" a substring.
   await expect(page).toHaveTitle(/Automation/);
+
 
   //await page.mouse.wheel(0, 1200);
   //await page.waitForTimeout(4000);
@@ -66,4 +71,26 @@ await page.locator("//input[@id='multipleFilesInput']").first()
     
 });
 
+
+
+});
+
+test('get started link', async ({ page }) => {
+  await page.goto('https://testautomationpractice.blogspot.com/');
+
+  // Click the get started link.
+  //await page.getByRole('link', { name: 'Get started' }).click();
+//await page.getByText('Home').click();
+//const homeLink = page.getByRole('link', { name: 'Home' });
+const homeLink = page.locator('#PageList2').getByRole('link', {name: 'Home'});
+//await expect(homeLink).toBeVi
+await expect(homeLink).toBeVisible();
+
+    // Click Home
+    await homeLink.click();
+    //await expect(homeLink).toHaveCount();
+
+console.log('Test passed successfully')
+ // await expect(page.getByRole('heading', {name: 'Data Entry Form'})).toBeVisible();
+});
 
